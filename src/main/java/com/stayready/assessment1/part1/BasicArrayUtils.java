@@ -1,12 +1,18 @@
 package com.stayready.assessment1.part1;
 
+
+/**
+ * This one was a breeezzeeeee
+ * 
+ * I hope the other ones are as easy
+ */
 public class BasicArrayUtils {
     /**
      * @param stringArray an array of String objects
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        return null;
+        return stringArray[0];
     }
 
     /**
@@ -14,7 +20,7 @@ public class BasicArrayUtils {
      * @return the second element in the array
      */
     public static String getSecondElement(String[] stringArray) {
-        return null;
+        return stringArray[1];
     }
 
     /**
@@ -22,7 +28,13 @@ public class BasicArrayUtils {
      * @return stringArray with the elements in reverse order
      */
     public static String[] reverse(String[] stringArray) {
-        return null;
+        String[] result = new String[stringArray.length];
+        int idx = result.length - 1;
+        for (String string : stringArray) {
+            result[idx] = string;
+            idx--;
+        }
+        return result;
     }
 
     /**
@@ -30,6 +42,10 @@ public class BasicArrayUtils {
      * @return String made up of the first character in each element of stringArray
      */
     public static String getFirstLetterOfEachElement(String[] stringArray) {
-        return null;
+        String result = "";
+        for(int idx = 0; idx < stringArray.length; idx++){
+            result += stringArray[idx].charAt(0);
+        }
+        return result;
     }
 }

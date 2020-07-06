@@ -21,7 +21,7 @@ public class IntegerArrayUtilsTest {
     }
 
     @Test
-    public void testGetProduct() {
+    public void getProductTest() {
         // : Given
         Integer[] input = { 1, 2, 3, 4, 5};
         Integer expected = 120;
@@ -60,7 +60,7 @@ public class IntegerArrayUtilsTest {
     }
 
     @Test
-    public void getLargest2() {
+    public void getLargestTest2() {
         // : Given
         Integer[] input = {2};
         Integer expected = 2;

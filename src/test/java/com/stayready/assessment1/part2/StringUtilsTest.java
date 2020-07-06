@@ -65,7 +65,7 @@ public class StringUtilsTest {
     @Test
     public void reverseFirstWordTest() {
         // Given
-        String inputString = "Yats Hunter";
+        String inputString = "Yats Ready";
         String expected = "staY Ready";
 
         // When
@@ -91,7 +91,7 @@ public class StringUtilsTest {
     @Test
     public void reverseFirstWordThenCamelCaseTest() {
         // Given
-        String inputString = "yats Hunter";
+        String inputString = "yats Ready";
         String expected = "StayReady";
 
         // When
