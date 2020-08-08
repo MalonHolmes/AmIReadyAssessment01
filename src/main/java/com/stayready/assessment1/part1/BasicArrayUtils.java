@@ -43,8 +43,8 @@ public class BasicArrayUtils {
      */
     public static String getFirstLetterOfEachElement(String[] stringArray) {
         String result = "";
-        for(int idx = 0; idx < stringArray.length; idx++){
-            result += stringArray[idx].charAt(0);
+        for (String string : stringArray) {
+            result += string.charAt(0);
         }
         return result;
     }

@@ -92,7 +92,7 @@ public class StringUtilsTest {
     public void reverseFirstWordThenCamelCaseTest() {
         // Given
         String inputString = "yats Ready";
-        String expected = "StayReady";
+        String expected = "Stay Ready";
 
         // When
         String actual = StringUtils.reverseFirstWordThenCamelCase(inputString);
@@ -105,7 +105,7 @@ public class StringUtilsTest {
     public void reverseFirstWordThenCamelCaseTest2() {
         // Given
         String inputString = "Adjunct professor";
-        String expected = "TcnujdaProfessor";
+        String expected = "Tcnujda Professor";
 
         // When
         String actual = StringUtils.reverseFirstWordThenCamelCase(inputString);

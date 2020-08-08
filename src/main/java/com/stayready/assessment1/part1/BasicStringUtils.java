@@ -10,8 +10,28 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) { // Alright, Tariq. you got me on this one lol
-        return null; // tried but skipped in order to save time
-        // tried googling but camel case is defined different on some websites so i couldnt find it
+        /* Tariq's way:
+        String[] strArr = str.split(" ");
+        StringBuilder sb = new StringBuilder();
+
+        for (String word : strArr) {
+            sb.append(Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ");
+        }
+
+        return sb.toString().trim(); // tried but skipped in order to save time
+        */
+
+        // Non-string builder way:
+        String words[] = str.split(" ");
+        String capitalWord = "";
+        for(String w:words)
+        {
+            String first = w.substring(0,1);
+            String afterString = w.substring(1);
+            capitalWord+= first.toUpperCase() + afterString+" ";
+        }
+        return capitalWord.trim();
+
     }
 
     /**
@@ -36,8 +56,8 @@ public class BasicStringUtils {
         for (int idx = 0; idx < strArr.length - 1; idx++) {
             result += reverse(strArr[idx]) + " ";
         }
-        result += reverse(strArr[strArr.length - 1]);
-        return result;
+
+        return result.trim();
     }
 
     /**
@@ -45,20 +65,22 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null; // didnt know out camelcase() so I didnt do this one
+        return camelCase(reverse(str));
     }
-
 
     /**
      * @param str a string input from user
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
+        /*  ______THE HARD WAY_______
         String result = "";
         for(int idx = 1; idx < str.length() - 1; idx++){
             result += str.charAt(idx);
         }
-        return result;
+        return result;*/
+        // ______THE BETTER WAY AYYYYEEEE_______
+        return str.substring(1, str.length() - 1);
     }
 
     /**

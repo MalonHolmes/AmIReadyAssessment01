@@ -21,7 +21,6 @@ public class MultiplesDeleterTest {
         UnitTestingUtils.assertArrayEquality(expected, actual);
     }
 
-
     @Test
     public void deleteOddsTest() {
         // Given 

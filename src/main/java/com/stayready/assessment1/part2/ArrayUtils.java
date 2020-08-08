@@ -1,10 +1,13 @@
 package com.stayready.assessment1.part2;
 
 
+import java.util.ArrayList;
+
 /**
  * This one look maddd complicated
  */
 public class ArrayUtils {
+
     /**
      * @param objectArray   an array of any type of Object
      * @param objectToCount any non-primitive value
@@ -14,7 +17,7 @@ public class ArrayUtils {
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
         Integer count = 0;
         for (Object obj : objectArray){
-            if(obj == objectToCount){
+            if(obj.equals(objectToCount)){
                 count++;
             }
         }

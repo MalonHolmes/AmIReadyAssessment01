@@ -1,5 +1,10 @@
 package com.stayready.assessment1.part2;
 
+import com.stayready.assessment1.part1.BasicStringUtils;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class StringUtils {
 
     /**
@@ -8,9 +13,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        return sentence.split(" ");
     }
-
 
     /**
      * @param sentence a string containing words delimited by spaces, representative of a sentence
@@ -18,7 +22,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] result = sentence.split(" ");
+        return result[0];
     }
 
     /**
@@ -27,7 +32,14 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String[] strArr = sentence.split(" ");
+        String firstWord = BasicStringUtils.reverse(getFirstWord(sentence));
+        strArr[0] = firstWord;
+        String result = "";
+        for (String word : strArr){
+            result += word + " ";
+        }
+        return result.trim();
     }
 
     /**
@@ -36,9 +48,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
+
+        String[] words = sentence.toLowerCase().split(" ");
+        System.out.println(words);
+
+
         return null;
     }
-
 
     /**
      * @param str string input from client
@@ -47,7 +63,19 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        ArrayList<Character> chars = new ArrayList<>();
+
+        for (int i = 0; i < str.length(); i++)
+        {
+            chars.add(str.charAt(i));
+        }
+        chars.remove(index);
+        String new_word = "";
+        for(int i = 0; i < chars.size(); i++)
+        {
+            new_word = new_word + chars.get(i);
+        }
+        return new_word;
     }
 
 }

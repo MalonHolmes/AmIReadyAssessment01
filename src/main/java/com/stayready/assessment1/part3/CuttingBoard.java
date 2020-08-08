@@ -7,6 +7,8 @@ package com.stayready.assessment1.part3;
  * A CuttingBoard implements Product
  */
 public class CuttingBoard {
+    private String name;
+    private double cost;
     /**
      * FIELDS
      *
@@ -22,7 +24,14 @@ public class CuttingBoard {
      * to the parameter price.
      *
      */
+    CuttingBoard(double price) {
+        this.cost = price;
+    }
 
+    CuttingBoard(double price, String name) {
+        this.cost = price;
+        this.name = name;
+    }
 
 
 
@@ -38,5 +47,25 @@ public class CuttingBoard {
      *      "This cutting board costs $[price]"
      *      Example: "This cutting board costs $19.99"
      */
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return cost;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public String getDescription() {
+        String info = "This cutting board costs S" + this.getPrice();
+    }
 
 }

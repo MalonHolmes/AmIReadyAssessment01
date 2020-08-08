@@ -1,5 +1,9 @@
 package com.stayready.assessment1.part2;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MultiplesDeleter {
     /**
      * @param ints array of Integer objects
@@ -7,6 +11,20 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public static Integer[] deleteEvens(Integer[] ints) {
+
+        /*
+        ArrayList<Integer> result = new ArrayList<>();
+
+        for (int idx = 0; idx < ints.length; idx++){
+            if (ints[idx] % 2 == 1){
+                result.add(ints[idx]);
+            }
+        }
+        Integer[] arr = (Integer[]) result.toArray();
+        Integer[] arr2 = Arrays.copyOf(arr);
+        //System.out.println(arr);
+        return arr2;
+        */
         return null;
     }
 
@@ -16,6 +34,17 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public static Integer[] deleteOdds(Integer[] ints) {
+
+        /*
+        ArrayList<Integer> result = new ArrayList<>();
+        for (int idx = 0; idx < ints.length; idx++){
+            if (ints[idx] % 2 == 0){
+                result.add(ints[idx]);
+            }
+        }
+        Integer[] arr = (Integer[]) result.toArray();
+        return arr;
+        */
         return null;
     }
 
